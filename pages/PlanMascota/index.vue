@@ -55,7 +55,6 @@ import Footer from '~/components/PlanMascota/Footer.vue';
         this.$nuxt.$loading.start()
         setTimeout(() => this.$nuxt.$loading.finish(), 2000)
       })
-    }
-
-  }
+    },
+}
 </script>

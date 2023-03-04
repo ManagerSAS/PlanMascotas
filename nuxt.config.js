@@ -10,12 +10,36 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      {name:"facebook-domain-verification",content:"1kq70ypcn44tuqj28hm392ifpzvp2a" }
     ],
+
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
+      {
+        type:'text/javascript',
+        innerHTML: `
+        <!-- Meta Pixel Code -->
+        <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '902155924454414');
+        fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+        /></noscript>
+        <!-- End Meta Pixel Code -->
+          `,
+          src:"https://www.facebook.com/tr?id=902155924454414&ev=PageView&noscript=1"
+      },
       {
         type:'text/javascript',
         innerHTML: `
@@ -60,11 +84,18 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
   ],
-
+  facebook: {
+    /* module options */
+    track: 'PageView',
+    pixelId: '902155924454414',
+    autoPageView: true,
+    disabled: false
+  },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'nuxt-facebook-pixel',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
