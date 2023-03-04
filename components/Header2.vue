@@ -19,6 +19,9 @@
                             <nav class="site-main-menu">
                                 <ul>
                                     <li>
+                                        <a style="text-decoration: none" target="_blank" href="https://www.losolivossantamarta.com/">Los Olivos</a>
+                                    </li>
+                                    <li>
                                         <n-link style="text-decoration: none" to="#planmascotas">Nuestro Plan Mascotas</n-link>
                                     </li>
                                     <li>

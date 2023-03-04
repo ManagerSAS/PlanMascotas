@@ -1,6 +1,6 @@
 <template >
     <div id="contact" >
-        <div class="intro-section bg-cover bg" >
+        <div class="intro-section bg-cover bgimg">
             <v-container fluid >
                 <v-form ref="form" autocomplete="off" class="mt-15 mt-md-10 pt-md-10">
                     <v-row align="center" justify="center" >
@@ -144,16 +144,10 @@
     </div>
 </template>
 <style lang="scss">
-.bg{
+.bgimg{
     background-image: url('/banners/bannerescritorio.png')!important;
-    // -webkit-background-image: url('/banners/bannerescritorio.jpg')!important;
-    // -moz-background-image: url('/banners/bannerescritorio.jpg')!important;
-    // -o-background-image: url('/banners/bannerescritorio.jpg')!important;
     @media #{$tablet-device,$small-mobile}{
         background-image: url('/banners/Bannercel.png')!important;
-        // -webkit-background-image: url('/banners/Bannercel.jpg')!important;
-        // -moz-background-image: url('/banners/Bannercel.jpg')!important;
-        // -o-background-image: url('/banners/Bannercel.jpg')!important;
     }
 }
 </style>
@@ -174,8 +168,161 @@ import Post from '../post/post'
         ],
         departamentos: [
             {
+                nombre: 'Amazonas',
+                ciudades: ['Leticia','Puerto Nariño','La Chorrera','Tarapacá','El Encanto','La Pedrera','La Victoria','Miriti - Parana']
+            },
+            {
+                nombre: 'Antioquia',
+                ciudades: ['Medellín','Bello','Itagüí','Envigado','Apartadó','Caucasia','Rionegro','Turbo','Santa Fe de Antioquia','Amagá','Caldas','Copacabana','Girardota','La Ceja','Sabaneta','San Jerónimo','Santo Domingo','Yarumal']
+
+            },
+            {
+                nombre: 'Arauca',
+                ciudades: ['Arauca','Saravena','Tame','Fortul','Cravo Norte']
+            },
+            {
+                nombre: 'Atlántico',
+                ciudades: ['Barranquilla','Soledad','Malambo','Sabanalarga','Puerto Colombia','Galapa','Baranoa','Campo de la Cruz','Luruaco','Palmar de Varela','Piojó','Polonuevo','Ponedera','Santa Lucía','Santo Tomás','Suán','Tubará','Usiacurí']
+
+            },
+            {
+                nombre: 'Bolívar',
+                ciudades: ['Cartagena de Indias','Magangué','Turbaco','Arjona','El Carmen de Bolívar','San Juan Nepomuceno','Mompox','Cantagallo','María la Baja','San Jacinto','Cicuco','Santa Rosa del Sur','Montecristo','Hatillo de Loba','Simití','Santa Catalina','San Estanislao','Arenal','Barranco de Loba','Calamar']
+
+            },
+            {
+                nombre: 'Boyacá',
+                ciudades: ['Tunja','Duitama','Sogamoso','Chiquinquirá','Paipa','Moniquirá','Puerto Boyacá','Güicán','Miraflores','Tota','Villa de Leyva','Aquitania','Belén','Ciénega','Gámeza','Jenesano','Nobsa','Ráquira','Sáchica','Sutamarchán','Tibasosa','Turmequé','Ventaquemada']
+            },
+            {
+                nombre: 'Caldas',
+                ciudades: ['Manizales', 'Chinchiná', 'La Dorada', 'Villamaría', 'Palestina', 'Salamina', 'Aguadas', 'Riosucio', 'Anserma', 'Neira', 'Pácora', 'Supía', 'Marmato', 'Marquetalia', 'Filadelfia', 'Belalcázar', 'Victoria']
+
+            },
+            {
+                nombre: 'Caquetá',
+                ciudades: ['Florencia', 'San Vicente del Caguán', 'Puerto Rico', 'Solano', 'Curillo', 'Albania', 'El Doncello', 'Morelia', 'Milán', 'Cartagena del Chairá', 'Valparaíso', 'Belén de los Andaquíes', 'San José del Fragua', 'La Montañita']
+
+            },
+            {
+                nombre: 'Casanare',
+                ciudades: ['Yopal', 'Aguazul', 'Tauramena', 'Villanueva', 'Maní', 'Paz de Ariporo', 'Monterrey', 'Trinidad', 'Orocué', 'Hato Corozal', 'Nunchía', 'Recetor', 'La Salina', 'Chámeza', 'San Luis de Palenque', 'Sabanalarga']
+
+            },
+            {
+                nombre: 'Cauca',
+                ciudades: ['Popayán', 'Santander de Quilichao', 'Piendamó', 'Cajibío', 'Patía', 'El Tambo', 'Puerto Tejada', 'Villa Rica', 'Miranda', 'Timbío', 'Guachené', 'Silvia', 'Palmira', 'Suárez', 'Inzá', 'Puracé', 'La Sierra', 'Balboa', 'Buenos Aires', 'Caloto', 'Corinto', 'Rosas', 'Jambaló', 'Almaguer', 'Totoró', 'Mercaderes', 'San Sebastián', 'Morales', 'Tunía', 'Florencia', 'La Vega']
+
+            },
+            {
+                nombre: 'Cesar',
+                ciudades: ['Valledupar', 'Aguachica', 'San Alberto', 'Pelaya', 'La Jagua de Ibirico', 'Bosconia', 'Codazzi', 'Chiriguaná', 'La Paz', 'Curumaní', 'Astrea', 'Gamarra', 'Pailitas', 'Tamalameque', 'Becerril', 'Manaure Balcón del Cesar']
+
+            },
+            {
+                nombre: 'Chocó',
+                ciudades: ['Quibdó', 'Bagadó', 'Tadó', 'Condoto', 'Istmina', 'Medio Atrato', 'El Carmen de Atrato', 'Lloró', 'Unión Panamericana', 'Riosucio', 'Medellín del Ariari', 'Nóvita', 'Cértegui', 'Nuquí', 'Sipí', 'Bajo Baudó']
+
+            },
+            {
+                nombre: 'Córdoba',
+                ciudades: ['Montería', 'Lorica', 'Sahagún', 'Planeta Rica', 'Montelíbano', 'Cereté', 'Tierralta', 'Chinú', 'San Antero', 'Puerto Escondido', 'Tuchín', 'Ayapel', 'Ciénaga de Oro', 'San Pelayo', 'Los Córdobas', 'Momil', 'Pueblo Nuevo', 'Canalete', 'San Carlos', 'La Apartada', 'Montelíbano']
+
+            },
+            {
+                nombre: 'Cundinamarca',
+                ciudades: ['Bogotá D.C.', 'Soacha', 'Zipaquirá', 'Girardot', 'Facatativá', 'Fusagasugá', 'Chía', 'Mosquera', 'Madrid', 'Funza', 'Sibaté', 'Cajicá', 'Tenjo', 'Tabio', 'La Calera', 'Tocancipá', 'El Rosal', 'Cota', 'Chocontá', 'Nemocón', 'Anapoima', 'Tocaima', 'Carmen de Viboral', 'Carmen de Carupa', 'Villeta', 'La Mesa', 'Ubaté', 'Guatavita', 'El Colegio', 'Silvania', 'La Vega', 'Pacho', 'Gachancipá', 'Guaduas', 'Sopó', 'Apulo', 'Cachipay', 'San Francisco', 'Gachalá', 'Sesquilé', 'Nilo', 'Nocaima', 'San Juan de Río Seco', 'Pasca', 'Manta', 'Ricaurte', 'Fómeque', 'Caparrapí', 'Vianí', 'Venecia', 'Quipile', 'Sutatausa', 'Supatá', 'Granada', 'San Antonio del Tequendama', 'San Bernardo', 'Cucunubá', 'Cogua', 'El Peñón', 'Junín', 'San Cayetano', 'Gama', 'Tibirita', 'Nariño', 'Tena', 'Villapinzón', 'Susa', 'El Colegio', 'San Juan de Rioseco', 'Bojacá', 'Tausa', 'Pulí', 'Chipaque', 'La Palma', 'Choachí', 'Machetá', 'Manta', 'Guasca', 'El Rosal', 'Tena', 'Tocaima']
+
+            },
+            {
+                nombre: 'Guainía',
+                ciudades: ['Inírida', 'La Guadalupe', 'Cacahual', 'Pana Pana', 'Mapiripana', 'Morichal Nuevo', 'San Felipe']
+
+            },
+            {
+                nombre: 'Guaviare',
+                ciudades: ['San José del Guaviare', 'El Retorno', 'Miraflores', 'Calamar', 'Guaviare']
+
+            },
+            {
+                nombre: 'Huila',
+                ciudades: ['Neiva', 'Pitalito', 'Garzón', 'Campoalegre', 'La Plata', 'Palermo', 'Tarqui', 'Baraya', 'Aipe', 'Rivera', 'Acevedo', 'Nátaga', 'Oporapa', 'Yaguará', 'Santa María', 'Villavieja', 'Algeciras', 'La Argentina', 'Tello', 'Timaná', 'Hobo', 'Tesalia', 'Suaza', 'Gigante', 'Teruel', 'Agrado', 'Paicol', 'Isnos', 'Íquira', 'Guadalupe', 'San Agustín']
+
+            },
+            {
+                nombre: 'La Guajira',
+                ciudades: ['Riohacha', 'Maicao', 'Uribia', 'Fonseca', 'Barrancas', 'Distracción', 'San Juan del Cesar', 'Villanueva', 'Albania', 'Manaure', 'Hatonuevo', 'Dibulla', 'La Jagua del Pilar', 'Urumita', 'Algarrobo', 'Maicao Viejo', 'El Molino']
+
+            },
+            {
                 nombre: 'Magdalena',
-                ciudades: ['Santa Marta','Ciénaga','Fundación','Aracataca','El Banco','Puebloviejo','Zona Bananera','Algarrobo','Chivolo','El Piñón','Pijiño del Carmen','Remolino','Sabanas de San Ángel','Salamina','San Sebastián de Buenavista','Santa Ana','Tenerife']
+                ciudades: ['Santa Marta', 'Ciénaga', 'Fundación', 'El Banco', 'Aracataca', 'Puebloviejo', 'Algarrobo', 'Plato', 'Chibolo', 'Zona Bananera', 'Remolino', 'Nueva Granada', 'El Retén', 'Pedraza', 'Guamal', 'Salamina', 'Pijiño del Carmen', 'San Zenón', 'Sitionuevo', 'Tenerife', 'Cerro de San Antonio', 'Ciénaga Grande', 'Concordia', 'Santa Ana', 'El Piñón', 'Sabanas de San Angel', 'Pivijay', 'Zapayán']
+
+            },
+            {
+                nombre: 'Meta',
+                ciudades: ['Villavicencio', 'Acacías', 'Granada', 'Puerto López', 'Restrepo', 'Guamal', 'Cumaral', 'La Macarena', 'Castilla la Nueva', 'El Castillo', 'Lejanías', 'San Juan de Arama', 'Puerto Gaitán', 'Barranca de Upía', 'San Carlos de Guaroa', 'Cabuyaro', 'Puerto Lleras', 'San Martín', 'Fuentedeoro', 'Mapiripán', 'Uribe', 'Mesetas', 'El Dorado', 'Vista Hermosa']
+
+            },
+            {
+                nombre: 'Nariño',
+                ciudades: ['Pasto', 'Ipiales', 'Tumaco', 'Túquerres', 'La Unión', 'Samaniego', 'Buesaco', 'Gualmatán', 'El Charco', 'Chachagüí', 'La Florida', 'San Pablo', 'Policarpa', 'La Cruz', 'Cumbal', 'Iles', 'Puerres', 'Albán', 'Olaya Herrera', 'San Lorenzo', 'Sandoná', 'Taminango', 'Yacuanquer', 'Ancuya', 'Barbacoas', 'Colón', 'Consaca', 'Cuaspud', 'El Peñol', 'El Rosario', 'Imués', 'Leiva', 'Linares', 'Pupiales', 'Arboleda', 'Belén', 'Chimbarongo', 'Contadero', 'Córdoba', 'Funes', 'Guachucal', 'Guaitarilla', 'La Llanada', 'Los Andes', 'Mallama', 'Mosquera', 'Nariño', 'Potosí', 'Providencia', 'Pupiales', 'San Bernardo', 'San Juan de Pasto', 'Santa Bárbara', 'Sapuyes', 'Tangua', 'Yacuanquer']
+
+            },
+            {
+                nombre: 'Norte de Santander',
+                ciudades: ['Cúcuta', 'Ocaña', 'Pamplona', 'Villa del Rosario', 'Los Patios', 'Chinácota', 'Tibú', 'El Zulia', 'El Tarra', 'Bochalema', 'La Playa', 'Ragonvalia', 'Ábrego', 'Arboledas', 'Cácota', 'Convención', 'Durania', 'Hacarí', 'Herrán', 'La Esperanza', 'Labateca', 'Lourdes', 'Mutiscua', 'Pamplonita', 'Río de Oro', 'Salazar', 'Santiago', 'Sardinata', 'Silos', 'Teorama', 'Toledo', 'Villa Caro']
+
+            },
+            {
+                nombre: 'Putumayo',
+                ciudades: ['Mocoa', 'Orito', 'Puerto Asís', 'Sibundoy', 'San Francisco', 'Colón', 'Puerto Guzmán', 'Villagarzón', 'Valle del Guamuez', 'San Miguel']
+
+            },
+            {
+                nombre: 'Quindío',
+                ciudades: ['Armenia', 'Calarcá', 'Circasia', 'Montenegro', 'La Tebaida', 'Salento', 'Filandia', 'Pijao', 'Buenavista']
+
+            },
+            {
+                nombre: 'Risaralda',
+                ciudades: ['Pereira', 'Dosquebradas', 'La Virginia', 'Santa Rosa de Cabal', 'Santuario', 'Marsella', 'Apía', 'Balboa', 'Belén de Umbría', 'Guática', 'Mistrató', 'Pueblo Rico', 'Quinchía', 'Viterbo']
+
+            },
+            {
+                nombre: 'San Andrés y Providencia',
+                ciudades: ['San Andrés', 'Providencia y Santa Catalina']
+
+            },
+            {
+                nombre: 'Santander',
+                ciudades: ['Bucaramanga', 'Floridablanca', 'Girón', 'Piedecuesta', 'Barrancabermeja', 'San Gil', 'Charalá', 'Málaga', 'Socorro', 'Puerto Wilches', 'Vélez', 'Barbosa', 'El Carmen de Chucurí', 'Galán', 'Guapotá', 'Lebrija', 'Los Santos', 'Oiba', 'Rionegro', 'San Vicente de Chucurí', 'Simacota', 'Valle de San José']
+
+            },
+            {
+                nombre: 'Sucre',
+                ciudades: ['Sincelejo', 'Corozal', 'Morroa', 'Sampués', 'San Onofre', 'Tolú', 'Coveñas', 'Los Palmitos', 'Ovejas', 'San Marcos', 'Chalán', 'Colosó', 'Guaranda', 'La Unión', 'San Antonio de Palmito', 'Sucre']
+
+            },
+            {
+                nombre: 'Tolima',
+                ciudades: ['Ibagué', 'Espinal', 'Líbano', 'Honda', 'Melgar', 'Chaparral', 'Mariquita', 'Guamo', 'Rovira', 'Fresno', 'Purificación', 'Coyaima', 'Natagaima', 'Venadillo', 'San Luis', 'Alpujarra', 'Armero', 'Ataco', 'Cajamarca', 'Casabianca', 'Dolores', 'El Guamo', 'Herveo', 'Icononzo', 'Prado', 'Saldaña', 'Suárez', 'Valle de San Juan', 'Villahermosa']
+
+            },
+            {
+                nombre: 'Valle del Cauca',
+                ciudades: ['Cali', 'Buenaventura', 'Palmira', 'Tuluá', 'Yumbo', 'Candelaria', 'Florida', 'Jamundí', 'Cali', 'Cali', 'La Victoria', 'Obando', 'Pradera', 'Restrepo', 'Riofrío', 'San Pedro', 'Sevilla', 'Trujillo', 'Vijes', 'Alcalá', 'Andalucía', 'Ansermanuevo', 'Bolívar', 'Caicedonia', 'Calima', 'Cartago', 'Dagua', 'El Águila', 'El Cairo', 'El Cerrito', 'Ginebra', 'Guacarí', 'La Cumbre', 'La Unión', 'La Victoria', 'Obando', 'Palmira', 'Roldanillo', 'San Juan', 'San Sebastián de Buenavista', 'Santiago de Cali', 'Toro', 'Trujillo', 'Tuluá', 'Ulloa', 'Versalles', 'Vijes', 'Yotoco', 'Yumbo', 'Zarzal']
+
+            },
+            {
+                nombre: 'Vaupés',
+                ciudades: ['Mitú', 'Caruru', 'Pacoa', 'Taraira', 'Papunahua', 'Yavaraté']
+
+            },
+            {
+                nombre: 'Vichada',
+                ciudades: ['Puerto Carreño', 'La Primavera', 'Cumaribo', 'Santa Rosalía']
+
             },
         ],
         dialogPoliticas: false,

@@ -15,7 +15,10 @@
                     <nav class="offcanvas-navigation" id="offcanvas-navigation">
                         <ul>
                             <li>
-                                <n-link style="text-decoration: none" to="#cobertura">Cobertura</n-link>
+                                <a style="text-decoration: none" target="_blank" href="https://www.losolivossantamarta.com/">Los Olivos</a>
+                            </li>
+                            <li>
+                                <n-link style="text-decoration: none" to="#planmascotas">Nuestro Plan Mascotas</n-link>
                             </li>
                             <li>
                                 <n-link style="text-decoration: none" to="#contacto">Contactános</n-link>
