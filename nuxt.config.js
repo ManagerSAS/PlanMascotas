@@ -43,6 +43,20 @@ export default {
       {
         type:'text/javascript',
         innerHTML: `
+        <<!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LMZ157ZJ5K"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-LMZ157ZJ5K');
+        </script>
+          `,
+      },
+      {
+        type:'text/javascript',
+        innerHTML: `
           function onSubmit(token) {
             document.getElementById("demo-form").submit();
           }
@@ -75,7 +89,9 @@ export default {
   plugins: [
     { src: '~/plugins/VueSlickCarousel', mode: 'client' }
   ],
-
+  googleAnalytics: {
+    id: 'G-LMZ157ZJ5K' // Reemplace con su ID de Google Analytics
+  },
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 

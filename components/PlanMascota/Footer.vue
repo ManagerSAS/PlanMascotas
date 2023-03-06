@@ -2,7 +2,6 @@
     <div class="footer bg-footer">
       <div>
         <h3>Contactanos</h3>
-        
         <v-btn text style="text-decoration: none; color: #fff;" href="https://wa.link/n9xqh6">
           <v-icon left>
             mdi-whatsapp

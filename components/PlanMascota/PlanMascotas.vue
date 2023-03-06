@@ -9,7 +9,7 @@
             <v-col cols="12" sm="12" md="10" lg="10" xl="8" align="center" justify="center">
                 <vue-slick-carousel   v-bind="settings">
                     <div v-for="({src,titulo}, index) in beneficios" :key="index" class="pa-6">
-                        <img :src="src" :alt="title" class="slide-image" />
+                        <img :src="src" :alt="titulo" class="slide-image" />
                         <div class="CopysGenerales">
                             {{ titulo }}
                         </div>
